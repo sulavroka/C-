@@ -20,11 +20,32 @@ class Coordinate{
 
 };
 
-int main(){
-	
-	Coordinate a(4, -3);
-	Coordinate b(5,-2);
 
-	cout << a.getX()<< endl;
+class Journey{
+
+	protected:	
+		Coordinate start;
+		Coordinate end; 
+
+	public: 
+
+		Journey(){
+		}
+
+};
+
+int main(){
+	//Copying Objects
+	Coordinate a(4, -3);
+	Coordinate b = a;
+
+	cout << b.getX()<< endl;
+
+	/*
+	This won't compile as there is no default Constructor
+		Coordinate a(4,2);
+		Coordinate b;
+	*/
+
 
 }
