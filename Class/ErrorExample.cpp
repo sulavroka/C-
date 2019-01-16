@@ -37,5 +37,26 @@ class ErrorExample{
 			// if you have an mem variable which is an object and don't have a default constructor than you have to use an initialisation syntax.
 		}
 
+			// How to fail at java
+
+		//String a = new String("Dave")
+		//String b = new String ("Dave")
+
+
+		/*
+			if(a = b){
+				Sys out(dave is dave) a and b is not strings they are pointer to the strings
+			} 
+			Why is insisting on construction useful?
+			void printlength(string a){
+				cout<< "Length is :"
+				<< a.size()
+				<<endl
+			}
+			won't through runtime exception string has to be initialised at very least has to call empty default constructor. 
+
+			
+		*/
+
 	}
 }
