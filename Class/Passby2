@@ -1,0 +1,44 @@
+#include<iostream>
+	using std:: cout;
+	using std:: endl;
+
+
+class Coordinate{
+	
+	protected:
+	int x;
+	int y;
+
+	public:
+	Coordinate(int xIn, int yIn) x(xIn), y(yIn):{
+	}
+
+	int getX(){
+		return x;
+	}
+
+	void setX(int xIn){
+		x = xIn;
+	}
+};
+
+ 
+ class Journey{
+
+ 	private:
+	Coordinate start;
+	Coordinate end;
+
+ 	public:
+ 	Journey(Coordinate startIn, Coordinate endIn): start(startIn), end(endIn){
+ 	}
+
+ 	Coordinate getStart(){
+ 	 return start;
+ 	}
+
+ };
+
+
+
+ int main()
