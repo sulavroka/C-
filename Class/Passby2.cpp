@@ -10,7 +10,7 @@ class Coordinate{
 	int y;
 
 	public:
-	Coordinate(int xIn, int yIn) x(xIn), y(yIn):{
+	Coordinate(int xIn, int yIn): x(xIn), y(yIn){
 	}
 
 	int getX(){
@@ -33,8 +33,8 @@ class Coordinate{
  	Journey(Coordinate startIn, Coordinate endIn): start(startIn), end(endIn){
  	}
 
- 	//return by reference	
- 	Coordinate & getStart(){
+ 	//return by reference	taking a copy from the journey class
+ 	Coordinate getStart(){
  	 return start;
  	}
 
@@ -42,13 +42,16 @@ class Coordinate{
 
  int main(){
  
- Coordinate a(4,2);
- Coordinate b(3,4);
+ Coordinate a(6,2);
+ Coordinate b(3,8);
 
  Journey myJourney(a,b);  
 
  Coordinate startsfrom = myJourney.getStart();
+ startsfrom.setX(0);
 
+ cout<<startsfrom.getX()<<endl;
+ cout<<myJourney.getStart().getX()<<endl;
 
  }
 
